@@ -28,7 +28,7 @@ jobs:
 
       - run: mkdir -p docs
 
-      - run: python rs_rating.py
+      - run: python rs_ratingsKR.py
 
       - run: python generate_site.py
 
