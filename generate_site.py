@@ -1,7 +1,20 @@
 import pandas as pd
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 df = pd.read_csv("docs/rs_ratingsKR.csv")
+
+df = df[
+    [
+        "ticker",
+        "description",
+        "rs_rating",
+    ]
+].rename(columns={
+    "ticker": "Ticker",
+    "description": "Company",
+    "rs_rating": "RS Rating",
+})
 
 html_table = df.to_html(
     index=False,
@@ -73,7 +86,7 @@ tr:nth-child(even) {{
 
 <p>
 Updated:
-{datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")}
+{datetime.now(ZoneInfo("Asia/Seoul")).strftime("%Y-%m-%d %H:%M")} (KST)
 </p>
 
 {html_table}
