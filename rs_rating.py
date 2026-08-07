@@ -14,14 +14,20 @@ Output:   RS Rating = percentile rank of RS_raw, scaled 1-99 (IBD convention)
 Also computes an Industry Group RS Rating: constituent rs_raw scores are
 aggregated per industry (TradingView's 131-category 'industry' field, the
 closest match to IBD's ~197 industry groups), then re-ranked with the same
-1-99 percentile convention. Pass group_col='sector' instead for the coarser
-21-category view.
+1-99 percentile convention.
 
 Also computes an EPS Rating: an independent approximation of IBD's earnings
 growth rating, on the same 1-99 percentile scale. IBD's real formula leans
 heavily on the most recent 1-2 quarters plus a 3-5 year growth trend, but
 TradingView doesn't expose a multi-year EPS CAGR field, so quarterly YoY,
 TTM YoY, and FY YoY growth stand in as the closest available horizons.
+
+Localization: company name (description) and industry are fetched TWICE --
+once with options.lang='en', once with options.lang='ko' -- and merged onto
+the same tickers, giving every row both a *_en and *_ko label. This is more
+reliable than TradingView's per-field '.tr' variants (confirmed working for
+'industry.tr', but 'description.tr' returns empty for every Korean ticker
+tested), at the cost of two extra lightweight API calls per run.
 
 Requires: pip install tradingview-screener pandas --break-system-packages
 """
@@ -34,16 +40,39 @@ import pandas as pd
 from tradingview_screener import Query, col
 
 
+def fetch_labels(lang: str) -> pd.DataFrame:
+    """Fetch just the language-dependent text fields for one TradingView
+    language code ('en' or 'ko'). Kept separate from fetch_universe() so we
+    can call it twice cheaply -- this query only carries 3 columns.
+
+    Uses 'industry.tr' (not plain 'industry') because only the '.tr' variant
+    actually responds to the lang option -- the plain field always returns
+    the same English category name regardless of lang."""
+    query = (
+        Query()
+        .select("name", "description", "industry.tr")
+        .where(
+            col("type") == "stock",
+            col("typespecs").has("common"),
+        )
+        .set_markets("korea")
+        .set_property("options", {"lang": lang})
+        .limit(10000)
+    )
+    n_rows, df = query.get_scanner_data()
+    print(f"Fetched {n_rows} '{lang}' label rows from TradingView scanner.")
+    return df
+
+
 def fetch_universe() -> pd.DataFrame:
-    """Pull the full US common-stock universe with performance fields."""
+    """Pull the full Korean common-stock universe with performance fields,
+    then merge in English and Korean label pairs (company name, industry)
+    for the language toggle."""
     query = (
         Query()
         .select(
             "name",
-            "description",
             "exchange",
-            "sector",
-            "industry",
             "close",
             "volume",
             "market_cap_basic",
@@ -61,9 +90,21 @@ def fetch_universe() -> pd.DataFrame:
         .set_markets("korea")
         .limit(10000)
     )
-
     n_rows, df = query.get_scanner_data()
     print(f"Fetched {n_rows} rows from TradingView scanner (returned {len(df)}).")
+
+    labels_en = fetch_labels("en").rename(
+        columns={"description": "description_en", "industry.tr": "industry_en"}
+    )
+    labels_ko = fetch_labels("ko").rename(
+        columns={"description": "description_ko", "industry.tr": "industry_ko"}
+    )
+    df = df.merge(labels_en[["name", "description_en", "industry_en"]], on="name", how="left")
+    df = df.merge(labels_ko[["name", "description_ko", "industry_ko"]], on="name", how="left")
+
+    print("Sample industry labels (check industry_ko is actually Korean):")
+    print(df[["industry_en", "industry_ko"]].drop_duplicates().head(5).to_string(index=False))
+
     return df
 
 
@@ -75,7 +116,7 @@ def clean_universe(df: pd.DataFrame) -> pd.DataFrame:
     print(f"Dropped {before - len(df)} rows with missing performance data "
           f"({len(df)} remain).")
 
-    missing_industry = df["industry"].isna().sum()
+    missing_industry = df["industry_en"].isna().sum()
     if missing_industry:
         print(f"Note: {missing_industry} stocks have no industry classification "
               f"and will be excluded from the industry group RS calc.")
@@ -145,8 +186,10 @@ def compute_group_rs(
     """
     Aggregate stock-level rs_raw into an IBD-style group Relative Strength Rating.
 
-    group_col:      'industry' (131 TradingView industries -- the closest match
-                     to IBD's ~197 industry groups) or 'sector' (21 broad sectors).
+    group_col:      the column to group stocks by, e.g. 'industry_en'. Grouping
+                     on the English label keeps the category boundaries fixed
+                     and unambiguous; the matching Korean label is attached
+                     afterward by the caller.
     min_group_size:  groups with fewer constituents than this are dropped --
                      a 2-stock "industry" isn't a meaningful group signal.
     weight_col:      None -> equal-weighted average across constituents.
@@ -191,8 +234,9 @@ def compute_group_rs(
 
 def save_outputs(df: pd.DataFrame, csv_path: str, json_path: str) -> None:
     out_cols = [
-        "name", "description", "exchange", "sector", "industry", "close", "volume",
-        "market_cap_basic", "Perf.3M", "Perf.6M", "Perf.9M_interp", "Perf.Y",
+        "name", "description_en", "description_ko", "exchange",
+        "industry_en", "industry_ko",
+        "close", "volume", "market_cap_basic", "Perf.3M", "Perf.6M", "Perf.9M_interp", "Perf.Y",
         "rs_raw", "rs_rating", "eps_raw", "eps_rating",
     ]
     out = df[out_cols].rename(columns={
@@ -214,6 +258,8 @@ def save_outputs(df: pd.DataFrame, csv_path: str, json_path: str) -> None:
             "RS Rating = percentile rank scaled 1-99. "
             "EPS_raw = 0.5*QoQ-quarter YoY growth + 0.3*TTM YoY growth + 0.2*FY YoY growth; "
             "EPS Rating = percentile rank scaled 1-99 (null where earnings data is incomplete). "
+            "description_en/description_ko and industry_en/industry_ko are separate "
+            "lang='en'/lang='ko' queries merged by ticker. "
             "Independent approximation, not IBD's proprietary formula."
         ),
         "stocks": out.to_dict(orient="records"),
@@ -266,20 +312,26 @@ def main():
 
     weight_col = "market_cap_basic" if args.cap_weighted else None
     industry_rs = compute_group_rs(
-        df, "industry", min_group_size=args.min_group_size, weight_col=weight_col
+        df, "industry_en", min_group_size=args.min_group_size, weight_col=weight_col
     )
+    industry_rs = industry_rs.rename(columns={"group": "industry_en"})
+    # Attach the matching Korean label for each group. This is a strict 1:1
+    # mapping (TradingView's industry taxonomy is a fixed enum), so grabbing
+    # the Korean label from any one constituent stock in that industry is safe.
+    label_map = df.drop_duplicates("industry_en").set_index("industry_en")["industry_ko"].to_dict()
+    industry_rs["industry_ko"] = industry_rs["industry_en"].map(label_map)
     save_group_outputs(industry_rs, "industry", args.industry_csv, args.industry_json)
 
     print(f"\nTop {args.top} stocks by RS Rating:")
     print(
-        df[["name", "close", "rs_rating", "Perf.3M", "Perf.Y"]]
+        df[["name", "close", "rs_rating", "eps_rating", "Perf.3M", "Perf.Y"]]
         .head(args.top)
         .to_string(index=False)
     )
 
     print(f"\nTop {args.top} industry groups by RS Rating:")
     print(
-        industry_rs[["group", "group_rs_rating", "n_stocks", "leader_pct"]]
+        industry_rs[["industry_en", "industry_ko", "group_rs_rating", "n_stocks", "leader_pct"]]
         .head(args.top)
         .to_string(index=False)
     )

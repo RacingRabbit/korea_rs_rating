@@ -11,13 +11,15 @@ stocks_df = pd.read_csv("docs/rs_ratingsKR.csv")
 stocks_df = stocks_df[
     [
         "ticker",
-        "description",
+        "description_en",
+        "description_ko",
         "rs_rating",
         "eps_rating",
     ]
 ].rename(columns={
     "ticker": "Ticker",
-    "description": "Company",
+    "description_en": "Company EN",
+    "description_ko": "Company KO",
     "rs_rating": "RS Rating",
     "eps_rating": "EPS Rating",
 }).reset_index(drop=True)  # csv is already sorted by RS rating, descending
@@ -38,38 +40,41 @@ except FileNotFoundError:
 # Build markup fragments
 # ---------------------------------------------------------------------------
 
-def build_entry(rank, ticker, company, rs, eps):
+def build_entry(rank, ticker, name_en, name_ko, rs, eps):
     top_class = "top" if rs >= 90 else ""
     eps_is_missing = pd.isna(eps)
     eps_display = "\u2013" if eps_is_missing else f"{int(eps)}"
     eps_attr = "" if eps_is_missing else str(int(eps))
     eps_hot = "hot" if (not eps_is_missing and eps >= 90) else ""
     ticker_esc = html_lib.escape(str(ticker))
-    company_esc = html_lib.escape(str(company))
-    return f"""<div class="entry {top_class}" data-rs="{int(rs)}" data-eps="{eps_attr}">
+    name_en_esc = html_lib.escape(str(name_en)) if pd.notna(name_en) else ticker_esc
+    name_ko_esc = html_lib.escape(str(name_ko)) if pd.notna(name_ko) else ticker_esc
+    return f"""<div class="entry {top_class}" data-rs="{int(rs)}" data-eps="{eps_attr}" data-name-en="{name_en_esc}" data-name-ko="{name_ko_esc}">
   <span class="rank">{rank}</span>
   <span class="ticker">{ticker_esc}</span>
-  <span class="name" title="{company_esc}">{company_esc}</span>
+  <span class="name" title="{name_ko_esc}">{name_ko_esc}</span>
   <span class="leader"></span>
   <span class="rs">{rs}</span>
   <span class="eps {eps_hot}">{eps_display}</span>
 </div>"""
 
 
-def build_industry_entry(rank, industry, rs, n_stocks, leader_pct):
+def build_industry_entry(rank, name_en, name_ko, rs, n_stocks, leader_pct):
     top_class = "top" if rs >= 90 else ""
-    industry_esc = html_lib.escape(str(industry))
-    tooltip = html_lib.escape(f"{int(n_stocks)} stocks \u00b7 {leader_pct:.0f}% rated RS 80+")
-    return f"""<div class="entry {top_class}">
+    name_en_esc = html_lib.escape(str(name_en))
+    name_ko_esc = html_lib.escape(str(name_ko))
+    tooltip_en = html_lib.escape(f"{int(n_stocks)} stocks \u00b7 {leader_pct:.0f}% rated RS 80+")
+    tooltip_ko = html_lib.escape(f"{int(n_stocks)}\uac1c \uc885\ubaa9 \u00b7 RS 80\uc810 \uc774\uc0c1 {leader_pct:.0f}%")
+    return f"""<div class="entry {top_class}" data-name-en="{name_en_esc}" data-name-ko="{name_ko_esc}" data-tooltip-en="{tooltip_en}" data-tooltip-ko="{tooltip_ko}">
   <span class="rank">{rank}</span>
-  <span class="name name-wide" title="{tooltip}">{industry_esc}</span>
+  <span class="name name-wide" title="{tooltip_ko}">{name_ko_esc}</span>
   <span class="leader"></span>
   <span class="rs">{int(rs)}</span>
 </div>"""
 
 
 entries_html = "\n".join(
-    build_entry(i + 1, row["Ticker"], row["Company"], row["RS Rating"], row["EPS Rating"])
+    build_entry(i + 1, row["Ticker"], row["Company EN"], row["Company KO"], row["RS Rating"], row["EPS Rating"])
     for i, row in stocks_df.iterrows()
 )
 
@@ -79,13 +84,13 @@ if industry_df is not None:
     industry_count = len(industry_df)
     industry_entries_html = "\n".join(
         build_industry_entry(
-            i + 1, row["group"], row["group_rs_rating"], row["n_stocks"], row["leader_pct"]
+            i + 1, row["industry_en"], row["industry_ko"], row["group_rs_rating"], row["n_stocks"], row["leader_pct"]
         )
         for i, row in industry_df.iterrows()
     )
     industry_section_html = f"""
   <div class="section-label">
-    <span>Industry Group Strength</span>
+    <span><span class="lang-ko">업종별 강도</span><span class="lang-en">Industry Group Strength</span></span>
     <span class="legend">RS</span>
   </div>
   <div class="listing">
@@ -93,32 +98,32 @@ if industry_df is not None:
   </div>
 """
 
-updated = datetime.now(ZoneInfo("Asia/Seoul")).strftime("%B %d, %Y  ·  %H:%M")
+now = datetime.now(ZoneInfo("Asia/Seoul"))
+updated_ko = now.strftime("%Y년 %m월 %d일  ·  %H:%M")
+updated_en = now.strftime("%B %d, %Y  ·  %H:%M")
 count = len(stocks_df)
 
 
 # ---------------------------------------------------------------------------
-# Client-side sort (plain string, not an f-string, so JS braces need no escaping)
+# Client-side script (plain string, not an f-string, so JS braces need no
+# escaping): handles both the RS/EPS sort and the EN/KO language toggle.
 # ---------------------------------------------------------------------------
 
-sort_script = """
+page_script = """
 <script>
 (function () {
+  // ---- Sort ----
   var container = document.getElementById('stock-listing');
-  if (!container) return;
-  // Fixed snapshot of the original (RS-descending) order. Every sort reads
-  // from this, never from a previous sort's result -- otherwise ties (very
-  // common, since RS only spans 1-99 across thousands of stocks) drift a
-  // little further from their original relative order on each click.
-  var originalOrder = Array.prototype.slice.call(container.children);
-  var state = { column: 'rs', dir: 'desc' };
+  var originalOrder = container ? Array.prototype.slice.call(container.children) : [];
+  var sortState = { column: 'rs', dir: 'desc' };
 
   function applySort(column) {
-    if (state.column === column) {
-      state.dir = state.dir === 'desc' ? 'asc' : 'desc';
+    if (!container) return;
+    if (sortState.column === column) {
+      sortState.dir = sortState.dir === 'desc' ? 'asc' : 'desc';
     } else {
-      state.column = column;
-      state.dir = 'desc';
+      sortState.column = column;
+      sortState.dir = 'desc';
     }
 
     var sorted = originalOrder.slice().sort(function (a, b) {
@@ -130,7 +135,7 @@ sort_script = """
       if (aMissing) return 1;   // blanks always sink to the bottom
       if (bMissing) return -1;
       var diff = parseFloat(av) - parseFloat(bv);
-      return state.dir === 'desc' ? -diff : diff;
+      return sortState.dir === 'desc' ? -diff : diff;
     });
 
     sorted.forEach(function (entry, i) {
@@ -143,13 +148,54 @@ sort_script = """
       var isActive = col === column;
       toggle.classList.toggle('active', isActive);
       toggle.querySelector('.arrow').textContent = isActive
-        ? (state.dir === 'desc' ? ' \u25bc' : ' \u25b2')
+        ? (sortState.dir === 'desc' ? ' \u25bc' : ' \u25b2')
         : '';
     });
   }
 
-  document.getElementById('sort-rs').addEventListener('click', function () { applySort('rs'); });
-  document.getElementById('sort-eps').addEventListener('click', function () { applySort('eps'); });
+  var sortRsBtn = document.getElementById('sort-rs');
+  var sortEpsBtn = document.getElementById('sort-eps');
+  if (sortRsBtn) sortRsBtn.addEventListener('click', function () { applySort('rs'); });
+  if (sortEpsBtn) sortEpsBtn.addEventListener('click', function () { applySort('eps'); });
+
+  // ---- Language toggle ----
+  var TITLES = {
+    ko: '\uc0c1\ub300\uac15\ub3c4 \ub9ac\ud3ec\ud2b8 \u2014 \ud55c\uad6d \uc8fc\uc2dd',
+    en: 'Relative Strength Report \u2014 Korean Equities'
+  };
+
+  function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.classList.toggle('lang-mode-en', lang === 'en');
+    document.title = TITLES[lang];
+
+    var koBtn = document.getElementById('lang-ko-btn');
+    var enBtn = document.getElementById('lang-en-btn');
+    if (koBtn) koBtn.classList.toggle('active', lang === 'ko');
+    if (enBtn) enBtn.classList.toggle('active', lang === 'en');
+
+    document.querySelectorAll('[data-name-en]').forEach(function (el) {
+      var nameEl = el.querySelector('.name');
+      if (!nameEl) return;
+      var text = lang === 'en' ? el.dataset.nameEn : el.dataset.nameKo;
+      nameEl.textContent = text;
+      var tooltip = lang === 'en'
+        ? (el.dataset.tooltipEn || text)
+        : (el.dataset.tooltipKo || text);
+      nameEl.title = tooltip;
+    });
+
+    try { localStorage.setItem('rs-report-lang', lang); } catch (e) {}
+  }
+
+  var savedLang = 'ko';
+  try { savedLang = localStorage.getItem('rs-report-lang') || 'ko'; } catch (e) {}
+  setLanguage(savedLang);
+
+  var langKoBtn = document.getElementById('lang-ko-btn');
+  var langEnBtn = document.getElementById('lang-en-btn');
+  if (langKoBtn) langKoBtn.addEventListener('click', function () { setLanguage('ko'); });
+  if (langEnBtn) langEnBtn.addEventListener('click', function () { setLanguage('en'); });
 })();
 </script>
 """
@@ -161,14 +207,14 @@ sort_script = """
 
 html = f"""
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Relative Strength Report — Korean Equities</title>
+<title>상대강도 리포트 — 한국 주식</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800;900&family=Atkinson+Hyperlegible+Next:wght@400;700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700;900&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {{
     color-scheme: light dark;
@@ -196,21 +242,28 @@ html = f"""
     margin: 0;
     background: var(--paper);
     color: var(--ink);
-    font-family: 'Atkinson Hyperlegible Next', Arial, sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
   }}
   .wrap {{
     max-width: 1200px;
     margin: 0 auto;
     padding: 28px 32px 60px;
   }}
+
+  /* Language toggle: Korean shows by default; the script adds .lang-mode-en
+     to <html> (a distinct class from .lang-en on individual spans below --
+     reusing the same name here would also match <html>, hiding the whole
+     page) to flip both content sets. */
+  .lang-en {{ display: none; }}
+  html.lang-mode-en .lang-en {{ display: inline; }}
+  html.lang-mode-en .lang-ko {{ display: none; }}
+
   .utility-bar {{
     display: flex;
     justify-content: space-between;
-    font-family: 'Inter', sans-serif;
     font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
+    letter-spacing: 0.03em;
     color: var(--ink-soft);
     padding-bottom: 10px;
     border-bottom: 1px solid var(--rule);
@@ -220,15 +273,13 @@ html = f"""
     padding: 22px 0 14px;
   }}
   .masthead h1 {{
-    font-family: 'Playfair Display', serif;
+    font-family: 'Noto Serif KR', serif;
     font-weight: 900;
-    font-size: 52px;
+    font-size: 46px;
     letter-spacing: 0.01em;
     margin: 0;
-    text-transform: uppercase;
   }}
   .masthead .subhead {{
-    font-style: italic;
     font-size: 15px;
     color: var(--ink-soft);
     margin-top: 6px;
@@ -236,11 +287,9 @@ html = f"""
   .dateline {{
     display: flex;
     justify-content: space-between;
-    font-family: 'Inter', sans-serif;
     font-size: 11px;
     font-weight: 500;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+    letter-spacing: 0.02em;
     color: var(--ink-soft);
     padding: 12px 0 8px;
   }}
@@ -254,11 +303,9 @@ html = f"""
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    font-family: 'Inter', sans-serif;
     font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
+    letter-spacing: 0.03em;
     color: var(--ink-soft);
     margin: 26px 0 10px;
     padding-bottom: 6px;
@@ -266,7 +313,7 @@ html = f"""
   }}
   .section-label .legend {{
     font-weight: 500;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
   }}
   .sort-toggle {{
     cursor: pointer;
@@ -357,14 +404,13 @@ html = f"""
     margin-top: 30px;
     padding-top: 12px;
     border-top: 1px solid var(--rule);
-    font-family: 'Inter', sans-serif;
     font-size: 10.5px;
     color: var(--ink-soft);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
   }}
   @media (max-width: 900px) {{
     .listing {{ column-count: 2; }}
-    .masthead h1 {{ font-size: 36px; }}
+    .masthead h1 {{ font-size: 32px; }}
   }}
   @media (max-width: 560px) {{
     .listing {{ column-count: 1; }}
@@ -375,26 +421,33 @@ html = f"""
 <div class="wrap">
 
   <div class="utility-bar">
-    <span>KOSPI · KOSDAQ Edition</span>
-    <span>{industry_count} Industry Groups</span>
-    <span>{count} Names Listed</span>
+    <span><span class="lang-ko">코스피 및 코스닥</span><span class="lang-en">KOSPI and KOSDAQ Stocks</span></span>
+    <span><span class="lang-ko">{industry_count}개 업종</span><span class="lang-en">{industry_count} Industry Groups</span></span>
+    <span><span class="lang-ko">{count}개 종목 수록</span><span class="lang-en">{count} Stocks Listed</span></span>
+    <span class="lang-switch">
+      <span id="lang-ko-btn" class="sort-toggle active">한국어</span>
+      &nbsp;·&nbsp;
+      <span id="lang-en-btn" class="sort-toggle">EN</span>
+    </span>
   </div>
 
   <div class="masthead">
-    <h1>Relative Strength Report</h1>
-    <div class="subhead">A Daily Ranking of Korean Equities and Industry Groups by Price and Earnings Momentum</div>
+    <h1><span class="lang-ko">Daily Morning Brew Korea</span><span class="lang-en">Daily Morning Brew Korea</span></h1>
+    <div class="subhead">
+      <span class="lang-ko">매일 아침, 갓 내린 랭킹</span>
+      <span class="lang-en">Freshly Brewed Rankings Every Morning</span>
+    </div>
   </div>
 
   <div class="dateline">
-    <span>Seoul, Republic of Korea</span>
-    <span>Updated {updated} KST</span>
-    <span>RS / EPS Rating · Scale 1&ndash;99</span>
+    <span><span class="lang-ko">{updated_ko} 업데이트 (KST)</span><span class="lang-en">Updated {updated_en} KST</span></span>
+    <span><span class="lang-ko">RS / EPS 등급 · 1&ndash;99점</span><span class="lang-en">RS / EPS Rating · Scale 1&ndash;99</span></span>
   </div>
 
   <div class="rule-double"></div>
 {industry_section_html}
   <div class="section-label">
-    <span>Individual Stock Ratings</span>
+    <span><span class="lang-ko">개별 종목 등급</span><span class="lang-en">Individual Stock Ratings</span></span>
     <span class="legend">
       <span id="sort-rs" class="sort-toggle active">RS<span class="arrow"> &#9660;</span></span>
       &nbsp;&nbsp;&nbsp;
@@ -406,14 +459,22 @@ html = f"""
   </div>
 
   <footer>
-    Independent, open-source approximation of the IBD Relative Strength and EPS Rating methodologies.
-    Not affiliated with, endorsed by, or connected to Investor's Business Daily or TradingView.
-    Ratings in red denote a score &ge; 90. EPS shown as &ndash; where earnings data is incomplete.
-    Click RS or EPS above the listing to sort.
+    <span class="lang-ko">
+      IBD(Investor's Business Daily)의 상대강도(RS) 및 EPS 등급 산정 방식을 독자적으로 오픈소스 방식으로 근사한 것입니다.
+      Investor's Business Daily 또는 TradingView와 제휴하거나 그들의 보증을 받지 않았으며 아무런 관련이 없습니다.
+      빨간색 등급은 90점 이상을 의미합니다. 실적 데이터가 불완전한 경우 EPS는 &ndash;로 표시됩니다.
+      목록 위쪽의 RS 또는 EPS를 클릭하면 정렬할 수 있습니다.
+    </span>
+    <span class="lang-en">
+      Independent, open-source approximation of the IBD Relative Strength and EPS Rating methodologies.
+      Not affiliated with, endorsed by, or connected to Investor's Business Daily or TradingView.
+      Ratings in red denote a score &ge; 90. EPS shown as &ndash; where earnings data is incomplete.
+      Click RS or EPS above the listing to sort.
+    </span>
   </footer>
 
 </div>
-{sort_script}
+{page_script}
 </body>
 </html>
 """
