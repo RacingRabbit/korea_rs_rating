@@ -1,9 +1,7 @@
 name: Update RS Ratings
 
 on:
-
   workflow_dispatch:
-
   schedule:
     - cron: "10 22 * * *"
 
@@ -11,13 +9,10 @@ permissions:
   contents: write
 
 jobs:
-
   update:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
@@ -28,7 +23,13 @@ jobs:
 
       - run: mkdir -p docs
 
-      - run: python rs_ratingsKR.py
+      - name: Generate RS ratings (stock-level and industry-group)
+        run: >
+          python rs_ratingsKR.py
+          --csv docs/rs_ratingsKR.csv
+          --json docs/rs_ratingsKR.json
+          --industry-csv docs/rs_industry_KR.csv
+          --industry-json docs/rs_industry_KR.json
 
       - run: python generate_site.py
 
