@@ -1,0 +1,84 @@
+industry_en,avg_rs_raw,n_stocks,leaders_80plus,group_rs_rating,leader_pct,industry_ko
+Broadcasting,62.761692097106106,8,2,99,25.0,Broadcasting
+Industrial Conglomerates,54.977716988142674,5,2,98,40.0,Industrial Conglomerates
+Specialty Stores,33.98781137448427,15,1,97,6.7,Specialty Stores
+Investment Managers,29.292996972182664,21,2,95,9.5,Investment Managers
+Automotive Aftermarket,24.085938273092637,6,3,94,50.0,Automotive Aftermarket
+Food: Major Diversified,23.330421106815336,9,4,93,44.4,Food: Major Diversified
+Motor Vehicles,17.824213641630067,6,2,92,33.3,Motor Vehicles
+Finance/Rental/Leasing,17.051678232388056,24,7,91,29.2,Finance/Rental/Leasing
+Semiconductors,14.661009615911192,119,39,90,32.8,Semiconductors
+Multi-Line Insurance,10.859292516492212,5,3,88,60.0,Multi-Line Insurance
+Major Banks,9.877318352528862,6,5,87,83.3,Major Banks
+Medical/Nursing Services,3.863991435289175,10,5,86,50.0,Medical/Nursing Services
+Electrical Products,3.357911238152692,80,24,85,30.0,Electrical Products
+Homebuilding,1.6483845963997652,10,4,84,40.0,Homebuilding
+Steel,0.01961665065752566,55,11,82,20.0,Steel
+Other Transportation,-0.5754130193221888,9,3,81,33.3,Other Transportation
+Oil Refining/Marketing,-0.7250601953079406,7,3,80,42.9,Oil Refining/Marketing
+Department Stores,-0.7899686104786948,10,5,79,50.0,Department Stores
+Wholesale Distributors,-1.6053104989366622,26,6,78,23.1,Wholesale Distributors
+Electronic Components,-2.064295428376597,60,18,77,30.0,Electronic Components
+Construction Materials,-4.4910305955027745,26,7,75,26.9,Construction Materials
+Financial Conglomerates,-4.816126579481803,62,15,74,24.2,Financial Conglomerates
+Food: Specialty/Candy,-4.869131906103641,26,6,73,23.1,Food: Specialty/Candy
+Investment Banks/Brokers,-6.666370123067878,23,5,72,21.7,Investment Banks/Brokers
+Marine Shipping,-7.790368846873438,9,3,71,33.3,Marine Shipping
+Auto Parts: OEM,-9.02541953371033,95,16,69,16.8,Auto Parts: OEM
+Agricultural Commodities/Milling,-9.485573263202623,25,3,68,12.0,Agricultural Commodities/Milling
+Telecommunications Equipment,-10.555854341407013,49,10,67,20.4,Telecommunications Equipment
+Industrial Machinery,-10.63739326150887,179,42,66,23.5,Industrial Machinery
+Chemicals: Major Diversified,-10.686643670986374,28,5,65,17.9,Chemicals: Major Diversified
+Electronics/Appliances,-11.028282038690838,25,7,64,28.0,Electronics/Appliances
+Computer Peripherals,-11.625021915867894,23,7,62,30.4,Computer Peripherals
+Real Estate Investment Trusts,-11.637374536123097,25,6,61,24.0,Real Estate Investment Trusts
+Electronic Equipment/Instruments,-11.99015476957266,56,10,60,17.9,Electronic Equipment/Instruments
+Pulp & Paper,-12.303674263729627,15,4,59,26.7,Pulp & Paper
+Miscellaneous,-12.501198825025854,6,1,58,16.7,Miscellaneous
+Engineering & Construction,-13.183252800946843,52,13,56,25.0,Engineering & Construction
+Household/Personal Care,-13.266844432704175,45,14,55,31.1,Household/Personal Care
+Beverages: Alcoholic,-13.278633780496621,9,0,54,0.0,Beverages: Alcoholic
+Pharmaceuticals: Other,-13.319292266730951,16,2,53,12.5,Pharmaceuticals: Other
+Forest Products,-13.39067605504061,8,2,52,25.0,Forest Products
+Regional Banks,-13.402039869819177,6,1,51,16.7,Regional Banks
+Medical Distributors,-13.672934742793021,17,3,49,17.6,Medical Distributors
+Industrial Specialties,-15.040213314040917,36,3,48,8.3,Industrial Specialties
+Textiles,-15.238462461018766,28,2,47,7.1,Textiles
+Gas Distributors,-15.595144585538664,15,1,46,6.7,Gas Distributors
+Air Freight/Couriers,-16.28817493363171,10,1,45,10.0,Air Freight/Couriers
+Pharmaceuticals: Major,-16.420597738724187,126,17,44,13.5,Pharmaceuticals: Major
+Electronic Production Equipment,-16.804514515298266,71,11,42,15.5,Electronic Production Equipment
+Metal Fabrication,-16.909753387143805,36,7,41,19.4,Metal Fabrication
+Chemicals: Agricultural,-16.99765878713462,8,0,40,0.0,Chemicals: Agricultural
+Food: Meat/Fish/Dairy,-17.10824533904996,15,2,39,13.3,Food: Meat/Fish/Dairy
+Apparel/Footwear,-17.234473361275843,47,11,38,23.4,Apparel/Footwear
+Chemicals: Specialty,-17.48585802865046,66,10,36,15.2,Chemicals: Specialty
+Other Consumer Services,-18.402138660092263,13,2,35,15.4,Other Consumer Services
+Internet Software/Services,-18.47950911051058,25,4,34,16.0,Internet Software/Services
+Aluminum,-18.733074255435817,8,1,33,12.5,Aluminum
+Electronics Distributors,-18.78799972525365,13,1,32,7.7,Electronics Distributors
+Hotels/Resorts/Cruise lines,-18.944486833763197,6,1,31,16.7,Hotels/Resorts/Cruise lines
+Information Technology Services,-19.544536740238453,60,10,29,16.7,Information Technology Services
+Internet Retail,-19.6286411364909,5,1,28,20.0,Internet Retail
+Miscellaneous Manufacturing,-19.69238735413474,13,2,27,15.4,Miscellaneous Manufacturing
+Airlines,-20.015360188061102,6,1,26,16.7,Airlines
+Home Furnishings,-20.033307554658833,16,1,25,6.2,Home Furnishings
+Trucks/Construction/Farm Machinery,-20.37408579041742,34,5,23,14.7,Trucks/Construction/Farm Machinery
+Office Equipment/Supplies,-20.554784727935708,6,1,22,16.7,Office Equipment/Supplies
+Aerospace & Defense,-20.687812940067626,18,3,21,16.7,Aerospace & Defense
+Biotechnology,-20.918256709624163,63,14,20,22.2,Biotechnology
+Computer Communications,-20.974965423018237,19,3,19,15.8,Computer Communications
+Building Products,-21.182556453245073,12,2,18,16.7,Building Products
+Miscellaneous Commercial Services,-21.369191095892994,75,13,16,17.3,Miscellaneous Commercial Services
+Recreational Products,-22.26606740691853,10,1,15,10.0,Recreational Products
+Major Telecommunications,-22.61574325580609,8,0,14,0.0,Major Telecommunications
+Advertising/Marketing Services,-22.867339940713546,20,2,13,10.0,Advertising/Marketing Services
+Containers/Packaging,-24.85393720003384,22,2,12,9.1,Containers/Packaging
+Medical Specialties,-25.47833803677932,103,10,10,9.7,Medical Specialties
+Packaged Software,-27.070269925494056,150,16,9,10.7,Packaged Software
+Other Metals/Minerals,-28.41743207048528,11,0,8,0.0,Other Metals/Minerals
+Publishing: Books/Magazines,-30.826158136390937,5,0,7,0.0,Publishing: Books/Magazines
+Commercial Printing/Forms,-35.9039948538149,5,0,6,0.0,Commercial Printing/Forms
+Computer Processing Hardware,-38.478860513041056,7,0,5,0.0,Computer Processing Hardware
+Movies/Entertainment,-40.77886426191763,30,3,3,10.0,Movies/Entertainment
+Data Processing Services,-42.08150899984137,5,0,2,0.0,Data Processing Services
