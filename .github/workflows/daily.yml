@@ -25,7 +25,7 @@ jobs:
 
       - name: Generate RS ratings (stock-level and industry-group)
         run: >
-          python rs_ratingsKR.py
+          python rs_ratings.py
           --csv docs/rs_ratingsKR.csv
           --json docs/rs_ratingsKR.json
           --industry-csv docs/rs_industry_KR.csv
