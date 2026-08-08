@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-07T22:52:50.062783+00:00",
+  "generated_at_utc": "2026-08-08T22:44:01.554645+00:00",
   "group_type": "industry",
   "group_count": 83,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -78,7 +78,7 @@
     },
     {
       "industry_en": "Semiconductors",
-      "avg_rs_raw": 14.661009615911192,
+      "avg_rs_raw": 14.66100961591119,
       "n_stocks": 119,
       "leaders_80plus": 39,
       "group_rs_rating": 90,
@@ -105,7 +105,7 @@
     },
     {
       "industry_en": "Medical/Nursing services",
-      "avg_rs_raw": 3.863991435289175,
+      "avg_rs_raw": 4.038962165530073,
       "n_stocks": 10,
       "leaders_80plus": 5,
       "group_rs_rating": 86,
@@ -681,7 +681,7 @@
     },
     {
       "industry_en": "Medical specialties",
-      "avg_rs_raw": -25.47833803677932,
+      "avg_rs_raw": -25.478298641295762,
       "n_stocks": 103,
       "leaders_80plus": 10,
       "group_rs_rating": 10,
@@ -690,7 +690,7 @@
     },
     {
       "industry_en": "Packaged software",
-      "avg_rs_raw": -27.070269925494056,
+      "avg_rs_raw": -27.311517394454476,
       "n_stocks": 150,
       "leaders_80plus": 16,
       "group_rs_rating": 9,
