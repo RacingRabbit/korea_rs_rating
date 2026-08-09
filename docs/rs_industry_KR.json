@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-08T22:44:01.554645+00:00",
+  "generated_at_utc": "2026-08-09T22:46:39.711838+00:00",
   "group_type": "industry",
   "group_count": 83,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
