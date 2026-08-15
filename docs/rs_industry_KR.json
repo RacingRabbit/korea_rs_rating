@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-14T22:37:36.393655+00:00",
+  "generated_at_utc": "2026-08-15T22:35:00.820849+00:00",
   "group_type": "industry",
   "group_count": 83,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -69,7 +69,7 @@
     },
     {
       "industry_en": "Semiconductors",
-      "avg_rs_raw": 23.27210122581201,
+      "avg_rs_raw": 22.431065036599858,
       "n_stocks": 118,
       "leaders_80plus": 45,
       "group_rs_rating": 91,
@@ -258,7 +258,7 @@
     },
     {
       "industry_en": "Telecommunications equipment",
-      "avg_rs_raw": -6.265711550177939,
+      "avg_rs_raw": -6.228463042534716,
       "n_stocks": 49,
       "leaders_80plus": 10,
       "group_rs_rating": 66,
