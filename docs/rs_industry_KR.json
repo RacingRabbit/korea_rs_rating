@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-15T22:35:00.820849+00:00",
+  "generated_at_utc": "2026-08-16T22:33:53.803435+00:00",
   "group_type": "industry",
   "group_count": 83,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -69,7 +69,7 @@
     },
     {
       "industry_en": "Semiconductors",
-      "avg_rs_raw": 22.431065036599858,
+      "avg_rs_raw": 22.471033806487856,
       "n_stocks": 118,
       "leaders_80plus": 45,
       "group_rs_rating": 91,
@@ -87,7 +87,7 @@
     },
     {
       "industry_en": "Electrical products",
-      "avg_rs_raw": 11.908658825139195,
+      "avg_rs_raw": 11.919652924863527,
       "n_stocks": 80,
       "leaders_80plus": 27,
       "group_rs_rating": 88,
@@ -258,7 +258,7 @@
     },
     {
       "industry_en": "Telecommunications equipment",
-      "avg_rs_raw": -6.228463042534716,
+      "avg_rs_raw": -6.228463042534717,
       "n_stocks": 49,
       "leaders_80plus": 10,
       "group_rs_rating": 66,
@@ -429,7 +429,7 @@
     },
     {
       "industry_en": "Pharmaceuticals: major",
-      "avg_rs_raw": -13.458944743120869,
+      "avg_rs_raw": -13.456590593205743,
       "n_stocks": 126,
       "leaders_80plus": 15,
       "group_rs_rating": 44,
@@ -699,7 +699,7 @@
     },
     {
       "industry_en": "Specialty stores",
-      "avg_rs_raw": -29.5554035659325,
+      "avg_rs_raw": -29.541384506515378,
       "n_stocks": 15,
       "leaders_80plus": 0,
       "group_rs_rating": 8,
