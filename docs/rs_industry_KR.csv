@@ -6,7 +6,7 @@ Food: major diversified,29.916339539578253,9,3,95,33.3,식품: 주요 다각화
 Finance/Rental/Leasing,26.30239550599128,23,5,94,21.7,금융/렌탈/리스
 Automotive aftermarket,23.87899614580413,7,3,93,42.9,자동차 애프터마켓
 Motor vehicles,22.25705882286456,6,2,92,33.3,자동차
-Semiconductors,15.734898494537136,119,43,91,36.1,세미컨덕터
+Semiconductors,15.213491302061469,119,43,91,36.1,세미컨덕터
 Pulp & paper,7.621943539250909,15,4,90,26.7,펄프 및 제지
 Multi-line insurance,5.118350220441774,5,3,88,60.0,복합 보험
 Electrical products,4.803822741033674,79,22,87,27.8,전기 제품
@@ -44,33 +44,33 @@ Chemicals: major diversified,-12.573057539341729,28,4,51,14.3,화학: 주요 복
 Gas distributors,-12.750070982938341,15,1,49,6.7,가스 유통업체
 Regional banks,-13.377701380175788,6,1,48,16.7,지역 은행
 Chemicals: specialty,-14.52100117353823,65,13,47,20.0,화학: 특수
-Forest products,-15.071219932208207,8,3,46,37.5,임산물
-Textiles,-15.094925912252917,28,4,45,14.3,텍스타일
-Air freight/Couriers,-15.106257886400428,10,0,44,0.0,항공/운수
-Electronic production equipment,-15.253902683936179,71,12,42,16.9,전자 생산 장비
-Information technology services,-15.497646462526044,60,9,41,15.0,정보 기술 서비스
-Chemicals: agricultural,-16.038873053003666,8,0,40,0.0,화학: 농업
-Pharmaceuticals: major,-16.28593568596518,126,15,39,11.9,의약품: 주요
-Other consumer services,-16.567356948470767,13,2,38,15.4,기타 소비자 서비스
-Food: meat/fish/dairy,-16.64468020596189,15,3,36,20.0,식품: 육류/어류/유제품
-Miscellaneous commercial services,-17.234519952801772,74,11,35,14.9,기타 상업 서비스
-Home furnishings,-17.302487456668374,16,1,34,6.2,가정용 가구
-Metal fabrication,-17.408067811023123,36,7,33,19.4,금속 가공
-Biotechnology,-18.07870911044339,63,16,32,25.4,바이오테크놀로지
-Aluminum,-18.249671997788404,8,1,31,12.5,알루미늄
-Office equipment/Supplies,-18.471445248987937,6,1,29,16.7,사무용품/소모품
-Airlines,-18.867424357892162,5,0,28,0.0,에어라인즈
-Hotels/Resorts/Cruise lines,-19.02105641254992,6,0,27,0.0,호텔/리조트/크루즈 라인
-Electronics distributors,-19.36752343580858,13,2,26,15.4,전자 부품 유통업체
-Internet retail,-19.537319982685258,5,2,25,40.0,인터넷 소매
-Computer communications,-19.700484228615103,20,3,23,15.0,컴퓨터 통신
-Trucks/Construction/Farm machinery,-20.752322820874756,34,3,22,8.8,트럭/건설/농기계
-Building products,-20.98681696367871,13,1,21,7.7,건축 자재
-Aerospace & defense,-21.069283768034385,17,2,20,11.8,항공우주 및 방위산업
-Miscellaneous manufacturing,-21.1934864840099,13,1,19,7.7,기타 제조업
-Recreational products,-21.335663179062248,10,1,18,10.0,레크리에이션 제품
-Advertising/Marketing services,-21.54647024885755,20,2,16,10.0,광고/마케팅 서비스
-Beverages: alcoholic,-21.58605471180517,9,0,15,0.0,음료: 알콜류
+Beverages: alcoholic,-14.525081844232501,9,0,46,0.0,음료: 알콜류
+Forest products,-15.071219932208207,8,3,45,37.5,임산물
+Textiles,-15.094925912252917,28,4,44,14.3,텍스타일
+Air freight/Couriers,-15.106257886400428,10,0,42,0.0,항공/운수
+Electronic production equipment,-15.253902683936179,71,12,41,16.9,전자 생산 장비
+Information technology services,-15.497646462526044,60,9,40,15.0,정보 기술 서비스
+Chemicals: agricultural,-16.038873053003666,8,0,39,0.0,화학: 농업
+Pharmaceuticals: major,-16.28593568596518,126,15,38,11.9,의약품: 주요
+Other consumer services,-16.567356948470767,13,2,36,15.4,기타 소비자 서비스
+Food: meat/fish/dairy,-16.64468020596189,15,3,35,20.0,식품: 육류/어류/유제품
+Miscellaneous commercial services,-17.234519952801772,74,11,34,14.9,기타 상업 서비스
+Home furnishings,-17.302487456668374,16,1,33,6.2,가정용 가구
+Metal fabrication,-17.408067811023123,36,7,32,19.4,금속 가공
+Biotechnology,-18.07870911044339,63,16,31,25.4,바이오테크놀로지
+Aluminum,-18.249671997788404,8,1,29,12.5,알루미늄
+Office equipment/Supplies,-18.471445248987937,6,1,28,16.7,사무용품/소모품
+Airlines,-18.867424357892162,5,0,27,0.0,에어라인즈
+Hotels/Resorts/Cruise lines,-19.02105641254992,6,0,26,0.0,호텔/리조트/크루즈 라인
+Electronics distributors,-19.36752343580858,13,2,25,15.4,전자 부품 유통업체
+Internet retail,-19.537319982685258,5,2,23,40.0,인터넷 소매
+Computer communications,-19.700484228615103,20,3,22,15.0,컴퓨터 통신
+Trucks/Construction/Farm machinery,-20.752322820874756,34,3,21,8.8,트럭/건설/농기계
+Building products,-20.98681696367871,13,1,20,7.7,건축 자재
+Aerospace & defense,-21.069283768034385,17,2,19,11.8,항공우주 및 방위산업
+Miscellaneous manufacturing,-21.1934864840099,13,1,18,7.7,기타 제조업
+Recreational products,-21.335663179062248,10,1,16,10.0,레크리에이션 제품
+Advertising/Marketing services,-21.54647024885755,20,2,15,10.0,광고/마케팅 서비스
 Packaged software,-23.268127068783226,149,16,14,10.7,패키지 소프트웨어
 Containers/Packaging,-23.2921943836679,22,2,13,9.1,컨테이너/패키징
 Publishing: books/magazines,-23.942429570212717,5,0,12,0.0,출판: 도서/잡지
