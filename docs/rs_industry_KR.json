@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-05T23:51:34.734154+00:00",
+  "generated_at_utc": "2026-09-06T23:50:20.490315+00:00",
   "group_type": "industry",
   "group_count": 83,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -402,7 +402,7 @@
     },
     {
       "industry_en": "Electronics distributors",
-      "avg_rs_raw": -9.016727280683497,
+      "avg_rs_raw": -9.016727280683495,
       "n_stocks": 13,
       "leaders_80plus": 3,
       "group_rs_rating": 47,
