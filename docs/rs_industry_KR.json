@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-12T23:58:51.750721+00:00",
+  "generated_at_utc": "2026-09-14T00:08:39.643534+00:00",
   "group_type": "industry",
   "group_count": 83,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -60,7 +60,7 @@
     },
     {
       "industry_en": "Semiconductors",
-      "avg_rs_raw": 10.919149728537827,
+      "avg_rs_raw": 10.919149728537825,
       "n_stocks": 118,
       "leaders_80plus": 42,
       "group_rs_rating": 92,
@@ -239,22 +239,22 @@
       "industry_ko": "\ud1b5\uc2e0 \uc7a5\ube44"
     },
     {
-      "industry_en": "Financial conglomerates",
-      "avg_rs_raw": -5.381553568974135,
-      "n_stocks": 60,
-      "leaders_80plus": 8,
-      "group_rs_rating": 68,
-      "leader_pct": 13.3,
-      "industry_ko": "\uae08\uc735\uc9c0\uc8fc\ud68c\uc0ac"
-    },
-    {
       "industry_en": "Internet software/Services",
       "avg_rs_raw": -5.891200671264617,
       "n_stocks": 25,
       "leaders_80plus": 7,
-      "group_rs_rating": 67,
+      "group_rs_rating": 68,
       "leader_pct": 28.0,
       "industry_ko": "\uc778\ud130\ub137 \uc18c\ud504\ud2b8\uc6e8\uc5b4/\uc11c\ube44\uc2a4"
+    },
+    {
+      "industry_en": "Financial conglomerates",
+      "avg_rs_raw": -6.141282198990952,
+      "n_stocks": 61,
+      "leaders_80plus": 8,
+      "group_rs_rating": 67,
+      "leader_pct": 13.1,
+      "industry_ko": "\uae08\uc735\uc9c0\uc8fc\ud68c\uc0ac"
     },
     {
       "industry_en": "Investment banks/Brokers",
@@ -473,11 +473,20 @@
       "industry_ko": "\uc0b0\uc5c5 \ubd84\uc57c"
     },
     {
+      "industry_en": "Containers/Packaging",
+      "avg_rs_raw": -12.862696237282721,
+      "n_stocks": 21,
+      "leaders_80plus": 3,
+      "group_rs_rating": 38,
+      "leader_pct": 14.3,
+      "industry_ko": "\ucee8\ud14c\uc774\ub108/\ud328\ud0a4\uc9d5"
+    },
+    {
       "industry_en": "Hotels/Resorts/Cruise lines",
       "avg_rs_raw": -13.772744094150989,
       "n_stocks": 6,
       "leaders_80plus": 1,
-      "group_rs_rating": 38,
+      "group_rs_rating": 36,
       "leader_pct": 16.7,
       "industry_ko": "\ud638\ud154/\ub9ac\uc870\ud2b8/\ud06c\ub8e8\uc988 \ub77c\uc778"
     },
@@ -486,7 +495,7 @@
       "avg_rs_raw": -13.857112927222405,
       "n_stocks": 15,
       "leaders_80plus": 1,
-      "group_rs_rating": 36,
+      "group_rs_rating": 35,
       "leader_pct": 6.7,
       "industry_ko": "\ud384\ud504 \ubc0f \uc81c\uc9c0"
     },
@@ -495,7 +504,7 @@
       "avg_rs_raw": -13.879392842434328,
       "n_stocks": 5,
       "leaders_80plus": 1,
-      "group_rs_rating": 35,
+      "group_rs_rating": 34,
       "leader_pct": 20.0,
       "industry_ko": "\uc778\ud130\ub137 \uc18c\ub9e4"
     },
@@ -504,7 +513,7 @@
       "avg_rs_raw": -14.122757276432996,
       "n_stocks": 9,
       "leaders_80plus": 0,
-      "group_rs_rating": 34,
+      "group_rs_rating": 33,
       "leader_pct": 0.0,
       "industry_ko": "\uc74c\ub8cc: \uc54c\ucf5c\ub958"
     },
@@ -513,7 +522,7 @@
       "avg_rs_raw": -14.141940768274335,
       "n_stocks": 7,
       "leaders_80plus": 0,
-      "group_rs_rating": 33,
+      "group_rs_rating": 32,
       "leader_pct": 0.0,
       "industry_ko": "\uae30\ud0c0 (Miscellaneous)"
     },
@@ -522,7 +531,7 @@
       "avg_rs_raw": -14.438886303090834,
       "n_stocks": 21,
       "leaders_80plus": 1,
-      "group_rs_rating": 32,
+      "group_rs_rating": 31,
       "leader_pct": 4.8,
       "industry_ko": "\ud22c\uc790 \uc6b4\uc6a9\uc0ac"
     },
@@ -531,7 +540,7 @@
       "avg_rs_raw": -15.388697160098195,
       "n_stocks": 34,
       "leaders_80plus": 5,
-      "group_rs_rating": 31,
+      "group_rs_rating": 29,
       "leader_pct": 14.7,
       "industry_ko": "\ud2b8\ub7ed/\uac74\uc124/\ub18d\uae30\uacc4"
     },
@@ -540,7 +549,7 @@
       "avg_rs_raw": -15.866872444401503,
       "n_stocks": 127,
       "leaders_80plus": 16,
-      "group_rs_rating": 29,
+      "group_rs_rating": 28,
       "leader_pct": 12.6,
       "industry_ko": "\uc758\uc57d\ud488: \uc8fc\uc694"
     },
@@ -549,7 +558,7 @@
       "avg_rs_raw": -16.076197208047006,
       "n_stocks": 6,
       "leaders_80plus": 0,
-      "group_rs_rating": 28,
+      "group_rs_rating": 27,
       "leader_pct": 0.0,
       "industry_ko": "\uc790\ub3d9\ucc28"
     },
@@ -558,7 +567,7 @@
       "avg_rs_raw": -16.10026670687219,
       "n_stocks": 74,
       "leaders_80plus": 12,
-      "group_rs_rating": 27,
+      "group_rs_rating": 26,
       "leader_pct": 16.2,
       "industry_ko": "\uae30\ud0c0 \uc0c1\uc5c5 \uc11c\ube44\uc2a4"
     },
@@ -567,7 +576,7 @@
       "avg_rs_raw": -16.16875168138736,
       "n_stocks": 11,
       "leaders_80plus": 0,
-      "group_rs_rating": 26,
+      "group_rs_rating": 25,
       "leader_pct": 0.0,
       "industry_ko": "\uae30\ud0c0 \uae08\uc18d/\uad11\ubb3c"
     },
@@ -576,7 +585,7 @@
       "avg_rs_raw": -16.401228732377582,
       "n_stocks": 16,
       "leaders_80plus": 2,
-      "group_rs_rating": 25,
+      "group_rs_rating": 23,
       "leader_pct": 12.5,
       "industry_ko": "\uc758\ub8cc \uc720\ud1b5\uc5c5\uccb4"
     },
@@ -585,18 +594,9 @@
       "avg_rs_raw": -16.52778218267756,
       "n_stocks": 19,
       "leaders_80plus": 2,
-      "group_rs_rating": 23,
+      "group_rs_rating": 22,
       "leader_pct": 10.5,
       "industry_ko": "\ud56d\uacf5\uc6b0\uc8fc \ubc0f \ubc29\uc704\uc0b0\uc5c5"
-    },
-    {
-      "industry_en": "Containers/Packaging",
-      "avg_rs_raw": -16.567917656040375,
-      "n_stocks": 22,
-      "leaders_80plus": 3,
-      "group_rs_rating": 22,
-      "leader_pct": 13.6,
-      "industry_ko": "\ucee8\ud14c\uc774\ub108/\ud328\ud0a4\uc9d5"
     },
     {
       "industry_en": "Food: major diversified",
