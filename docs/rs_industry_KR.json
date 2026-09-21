@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-20T00:08:00.056527+00:00",
+  "generated_at_utc": "2026-09-21T00:13:05.572720+00:00",
   "group_type": "industry",
   "group_count": 84,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -293,11 +293,20 @@
       "industry_ko": "\uc804\uc790 \uc0dd\uc0b0 \uc7a5\ube44"
     },
     {
+      "industry_en": "Auto parts: OEM",
+      "avg_rs_raw": -9.074371351885356,
+      "n_stocks": 94,
+      "leaders_80plus": 13,
+      "group_rs_rating": 62,
+      "leader_pct": 13.8,
+      "industry_ko": "\uc790\ub3d9\ucc28 \ubd80\ud488: OEM"
+    },
+    {
       "industry_en": "Regional banks",
       "avg_rs_raw": -9.093783264741534,
       "n_stocks": 6,
       "leaders_80plus": 1,
-      "group_rs_rating": 62,
+      "group_rs_rating": 60,
       "leader_pct": 16.7,
       "industry_ko": "\uc9c0\uc5ed \uc740\ud589"
     },
@@ -306,7 +315,7 @@
       "avg_rs_raw": -9.245866501539433,
       "n_stocks": 25,
       "leaders_80plus": 4,
-      "group_rs_rating": 60,
+      "group_rs_rating": 59,
       "leader_pct": 16.0,
       "industry_ko": "\uc778\ud130\ub137 \uc18c\ud504\ud2b8\uc6e8\uc5b4/\uc11c\ube44\uc2a4"
     },
@@ -315,18 +324,9 @@
       "avg_rs_raw": -10.003613535829777,
       "n_stocks": 8,
       "leaders_80plus": 1,
-      "group_rs_rating": 59,
+      "group_rs_rating": 58,
       "leader_pct": 12.5,
       "industry_ko": "\uc784\uc0b0\ubb3c"
-    },
-    {
-      "industry_en": "Auto parts: OEM",
-      "avg_rs_raw": -10.029595829458263,
-      "n_stocks": 95,
-      "leaders_80plus": 13,
-      "group_rs_rating": 58,
-      "leader_pct": 13.7,
-      "industry_ko": "\uc790\ub3d9\ucc28 \ubd80\ud488: OEM"
     },
     {
       "industry_en": "Finance/Rental/Leasing",
@@ -410,20 +410,11 @@
       "industry_ko": "\ucee8\ud14c\uc774\ub108/\ud328\ud0a4\uc9d5"
     },
     {
-      "industry_en": "Major telecommunications",
-      "avg_rs_raw": -11.88578618941232,
-      "n_stocks": 7,
-      "leaders_80plus": 1,
-      "group_rs_rating": 46,
-      "leader_pct": 14.3,
-      "industry_ko": "\uc8fc\uc694 \ud1b5\uc2e0\uc0ac"
-    },
-    {
       "industry_en": "Investment managers",
       "avg_rs_raw": -11.918328507038016,
       "n_stocks": 21,
       "leaders_80plus": 3,
-      "group_rs_rating": 45,
+      "group_rs_rating": 46,
       "leader_pct": 14.3,
       "industry_ko": "\ud22c\uc790 \uc6b4\uc6a9\uc0ac"
     },
@@ -432,7 +423,7 @@
       "avg_rs_raw": -11.951625688926383,
       "n_stocks": 5,
       "leaders_80plus": 2,
-      "group_rs_rating": 44,
+      "group_rs_rating": 45,
       "leader_pct": 40.0,
       "industry_ko": "\uc778\ud130\ub137 \uc18c\ub9e4"
     },
@@ -441,7 +432,7 @@
       "avg_rs_raw": -12.282176896429435,
       "n_stocks": 13,
       "leaders_80plus": 4,
-      "group_rs_rating": 43,
+      "group_rs_rating": 44,
       "leader_pct": 30.8,
       "industry_ko": "\uc804\uc790 \ubd80\ud488 \uc720\ud1b5\uc5c5\uccb4"
     },
@@ -450,7 +441,7 @@
       "avg_rs_raw": -12.689610892229277,
       "n_stocks": 10,
       "leaders_80plus": 0,
-      "group_rs_rating": 42,
+      "group_rs_rating": 43,
       "leader_pct": 0.0,
       "industry_ko": "\ud56d\uacf5/\uc6b4\uc218"
     },
@@ -459,7 +450,7 @@
       "avg_rs_raw": -13.575230737449598,
       "n_stocks": 13,
       "leaders_80plus": 3,
-      "group_rs_rating": 41,
+      "group_rs_rating": 42,
       "leader_pct": 23.1,
       "industry_ko": "\uae30\ud0c0 \uc18c\ube44\uc790 \uc11c\ube44\uc2a4"
     },
@@ -468,7 +459,7 @@
       "avg_rs_raw": -13.769262163136274,
       "n_stocks": 19,
       "leaders_80plus": 2,
-      "group_rs_rating": 40,
+      "group_rs_rating": 41,
       "leader_pct": 10.5,
       "industry_ko": "\ud56d\uacf5\uc6b0\uc8fc \ubc0f \ubc29\uc704\uc0b0\uc5c5"
     },
@@ -477,7 +468,7 @@
       "avg_rs_raw": -13.810043027020775,
       "n_stocks": 36,
       "leaders_80plus": 4,
-      "group_rs_rating": 38,
+      "group_rs_rating": 40,
       "leader_pct": 11.1,
       "industry_ko": "\uc0b0\uc5c5 \ubd84\uc57c"
     },
@@ -486,7 +477,7 @@
       "avg_rs_raw": -14.214034798317373,
       "n_stocks": 15,
       "leaders_80plus": 3,
-      "group_rs_rating": 37,
+      "group_rs_rating": 38,
       "leader_pct": 20.0,
       "industry_ko": "\uc2dd\ud488: \uc721\ub958/\uc5b4\ub958/\uc720\uc81c\ud488"
     },
@@ -495,7 +486,7 @@
       "avg_rs_raw": -14.332233066619402,
       "n_stocks": 26,
       "leaders_80plus": 1,
-      "group_rs_rating": 36,
+      "group_rs_rating": 37,
       "leader_pct": 3.8,
       "industry_ko": "\ub18d\uc0b0\ubb3c/\uc81c\ubd84"
     },
@@ -504,7 +495,7 @@
       "avg_rs_raw": -14.67794948821225,
       "n_stocks": 7,
       "leaders_80plus": 0,
-      "group_rs_rating": 35,
+      "group_rs_rating": 36,
       "leader_pct": 0.0,
       "industry_ko": "\uae30\ud0c0 (Miscellaneous)"
     },
@@ -513,7 +504,7 @@
       "avg_rs_raw": -15.265022565833752,
       "n_stocks": 6,
       "leaders_80plus": 1,
-      "group_rs_rating": 34,
+      "group_rs_rating": 35,
       "leader_pct": 16.7,
       "industry_ko": "\uc5d0\uc5b4\ub77c\uc778\uc988"
     },
@@ -522,9 +513,18 @@
       "avg_rs_raw": -15.473755355207125,
       "n_stocks": 15,
       "leaders_80plus": 1,
-      "group_rs_rating": 32,
+      "group_rs_rating": 34,
       "leader_pct": 6.7,
       "industry_ko": "\ud384\ud504 \ubc0f \uc81c\uc9c0"
+    },
+    {
+      "industry_en": "Apparel/Footwear",
+      "avg_rs_raw": -15.564187973000466,
+      "n_stocks": 47,
+      "leaders_80plus": 7,
+      "group_rs_rating": 32,
+      "leader_pct": 14.9,
+      "industry_ko": "\uc5b4\ud328\ub7f4/\ud48b\uc6e8\uc5b4"
     },
     {
       "industry_en": "Trucks/Construction/Farm machinery",
@@ -581,20 +581,11 @@
       "industry_ko": "\uae30\ud0c0 \uc0c1\uc5c5 \uc11c\ube44\uc2a4"
     },
     {
-      "industry_en": "Apparel/Footwear",
-      "avg_rs_raw": -17.261198129396544,
-      "n_stocks": 48,
-      "leaders_80plus": 7,
-      "group_rs_rating": 24,
-      "leader_pct": 14.6,
-      "industry_ko": "\uc5b4\ud328\ub7f4/\ud48b\uc6e8\uc5b4"
-    },
-    {
       "industry_en": "Pharmaceuticals: major",
       "avg_rs_raw": -17.414509546828324,
       "n_stocks": 126,
       "leaders_80plus": 15,
-      "group_rs_rating": 23,
+      "group_rs_rating": 24,
       "leader_pct": 11.9,
       "industry_ko": "\uc758\uc57d\ud488: \uc8fc\uc694"
     },
@@ -603,18 +594,27 @@
       "avg_rs_raw": -17.480513361138605,
       "n_stocks": 11,
       "leaders_80plus": 0,
-      "group_rs_rating": 22,
+      "group_rs_rating": 23,
       "leader_pct": 0.0,
       "industry_ko": "\uae30\ud0c0 \uae08\uc18d/\uad11\ubb3c"
     },
     {
       "industry_en": "Medical distributors",
-      "avg_rs_raw": -17.594496585831493,
-      "n_stocks": 16,
+      "avg_rs_raw": -17.525333887314893,
+      "n_stocks": 17,
       "leaders_80plus": 2,
+      "group_rs_rating": 22,
+      "leader_pct": 11.8,
+      "industry_ko": "\uc758\ub8cc \uc720\ud1b5\uc5c5\uccb4"
+    },
+    {
+      "industry_en": "Major telecommunications",
+      "avg_rs_raw": -17.69391746500643,
+      "n_stocks": 8,
+      "leaders_80plus": 1,
       "group_rs_rating": 21,
       "leader_pct": 12.5,
-      "industry_ko": "\uc758\ub8cc \uc720\ud1b5\uc5c5\uccb4"
+      "industry_ko": "\uc8fc\uc694 \ud1b5\uc2e0\uc0ac"
     },
     {
       "industry_en": "Packaged software",
