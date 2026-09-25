@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-24T00:28:18.124992+00:00",
+  "generated_at_utc": "2026-09-25T00:31:43.896917+00:00",
   "group_type": "industry",
   "group_count": 84,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -134,9 +134,9 @@
       "industry_en": "Telecommunications equipment",
       "avg_rs_raw": 1.2677657611157294,
       "n_stocks": 49,
-      "leaders_80plus": 11,
+      "leaders_80plus": 12,
       "group_rs_rating": 83,
-      "leader_pct": 22.4,
+      "leader_pct": 24.5,
       "industry_ko": "\ud1b5\uc2e0 \uc7a5\ube44"
     },
     {
@@ -159,7 +159,7 @@
     },
     {
       "industry_en": "Aluminum",
-      "avg_rs_raw": 0.2769752217849337,
+      "avg_rs_raw": 0.27697522178493417,
       "n_stocks": 8,
       "leaders_80plus": 1,
       "group_rs_rating": 79,
@@ -168,7 +168,7 @@
     },
     {
       "industry_en": "Industrial machinery",
-      "avg_rs_raw": -0.4398686524614984,
+      "avg_rs_raw": -0.43986865246149826,
       "n_stocks": 179,
       "leaders_80plus": 43,
       "group_rs_rating": 78,
@@ -231,11 +231,11 @@
     },
     {
       "industry_en": "Electronic production equipment",
-      "avg_rs_raw": -3.1069165766881195,
-      "n_stocks": 71,
-      "leaders_80plus": 18,
+      "avg_rs_raw": -3.2983636128144003,
+      "n_stocks": 70,
+      "leaders_80plus": 17,
       "group_rs_rating": 70,
-      "leader_pct": 25.4,
+      "leader_pct": 24.3,
       "industry_ko": "\uc804\uc790 \uc0dd\uc0b0 \uc7a5\ube44"
     },
     {
@@ -366,7 +366,7 @@
     },
     {
       "industry_en": "Home furnishings",
-      "avg_rs_raw": -7.3542174171528245,
+      "avg_rs_raw": -7.375811094817538,
       "n_stocks": 16,
       "leaders_80plus": 3,
       "group_rs_rating": 52,
