@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-25T00:31:43.896917+00:00",
+  "generated_at_utc": "2026-09-26T00:36:24.574497+00:00",
   "group_type": "industry",
   "group_count": 84,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -24,7 +24,7 @@
     },
     {
       "industry_en": "Semiconductors",
-      "avg_rs_raw": 16.19546678931649,
+      "avg_rs_raw": 16.194164232537712,
       "n_stocks": 120,
       "leaders_80plus": 47,
       "group_rs_rating": 97,
@@ -240,7 +240,7 @@
     },
     {
       "industry_en": "Chemicals: specialty",
-      "avg_rs_raw": -3.577004354407545,
+      "avg_rs_raw": -3.5770043544075447,
       "n_stocks": 66,
       "leaders_80plus": 16,
       "group_rs_rating": 69,

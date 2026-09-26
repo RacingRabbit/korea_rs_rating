@@ -1,7 +1,7 @@
 industry_en,avg_rs_raw,n_stocks,leaders_80plus,group_rs_rating,leader_pct,industry_ko
 Electrical products,22.559429799873158,80,35,99,43.8,전기 제품
 Homebuilding,21.647240637933944,10,4,98,40.0,홈빌딩
-Semiconductors,16.19546678931649,120,47,97,39.2,세미컨덕터
+Semiconductors,16.194164232537712,120,47,97,39.2,세미컨덕터
 Major banks,15.074161714095593,6,5,96,83.3,주요 은행
 Electronic components,13.437588376630552,59,20,94,33.9,전자 부품
 Multi-line insurance,11.613408263024334,5,3,93,60.0,복합 보험
@@ -25,7 +25,7 @@ Financial publishing/Services,-2.482331327876241,5,0,73,0.0,금융 출판/서비
 Food: specialty/candy,-2.5968274482777716,26,4,72,15.4,식품: 특산품/과자
 Construction materials,-3.088486056517114,25,3,71,12.0,건축 자재
 Electronic production equipment,-3.2983636128144003,70,17,70,24.3,전자 생산 장비
-Chemicals: specialty,-3.577004354407545,66,16,69,24.2,화학: 특수
+Chemicals: specialty,-3.5770043544075447,66,16,69,24.2,화학: 특수
 Internet software/Services,-3.990399919779743,25,6,68,24.0,인터넷 소프트웨어/서비스
 Engineering & construction,-4.016838859270321,53,15,66,28.3,엔지니어링 및 건설
 Computer peripherals,-4.0482758766557785,23,5,65,21.7,컴퓨터 주변기기
