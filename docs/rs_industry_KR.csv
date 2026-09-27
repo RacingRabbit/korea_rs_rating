@@ -1,7 +1,7 @@
 industry_en,avg_rs_raw,n_stocks,leaders_80plus,group_rs_rating,leader_pct,industry_ko
 Electrical products,22.559429799873158,80,35,99,43.8,전기 제품
 Homebuilding,21.647240637933944,10,4,98,40.0,홈빌딩
-Semiconductors,16.194164232537712,120,47,97,39.2,세미컨덕터
+Semiconductors,16.201861225256284,120,47,97,39.2,세미컨덕터
 Major banks,15.074161714095593,6,5,96,83.3,주요 은행
 Electronic components,13.437588376630552,59,20,94,33.9,전자 부품
 Multi-line insurance,11.613408263024334,5,3,93,60.0,복합 보험
@@ -13,10 +13,10 @@ Medical/Nursing services,6.397572700874088,10,3,87,30.0,의료/간호 서비스
 Computer communications,5.537397543756254,19,7,86,36.8,컴퓨터 통신
 Household/Personal care,3.351623182060296,45,15,85,33.3,가정/개인 위생용품
 Wholesale distributors,2.9033299486861797,26,7,84,26.9,도매 유통업체
-Telecommunications equipment,1.2677657611157294,49,12,83,24.5,통신 장비
+Telecommunications equipment,1.267765761115729,49,12,83,24.5,통신 장비
 Marine shipping,0.4716900183124493,9,3,82,33.3,해상 운송
 Electronic equipment/Instruments,0.44960781034620645,56,14,80,25.0,전자 장비/기기
-Aluminum,0.27697522178493417,8,1,79,12.5,알루미늄
+Aluminum,0.2769752217849337,8,1,79,12.5,알루미늄
 Industrial machinery,-0.43986865246149826,179,43,78,24.0,산업용 기계
 Department stores,-0.9157754169402204,10,2,77,20.0,백화점
 Regional banks,-1.0022156083756013,6,1,76,16.7,지역 은행
