@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-04T00:34:23.993111+00:00",
+  "generated_at_utc": "2026-10-05T00:52:45.108393+00:00",
   "group_type": "industry",
   "group_count": 84,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -312,7 +312,7 @@
     },
     {
       "industry_en": "Auto parts: OEM",
-      "avg_rs_raw": -4.013962293818507,
+      "avg_rs_raw": -4.0139622938185076,
       "n_stocks": 96,
       "leaders_80plus": 14,
       "group_rs_rating": 59,
