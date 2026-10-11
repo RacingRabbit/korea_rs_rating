@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-10T01:44:34.404482+00:00",
+  "generated_at_utc": "2026-10-11T00:58:10.859971+00:00",
   "group_type": "industry",
   "group_count": 84,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -15,7 +15,7 @@
     },
     {
       "industry_en": "Semiconductors",
-      "avg_rs_raw": 28.726101612563422,
+      "avg_rs_raw": 28.66243326982375,
       "n_stocks": 120,
       "leaders_80plus": 55,
       "group_rs_rating": 98,
