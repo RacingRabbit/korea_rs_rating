@@ -1,12 +1,12 @@
 {
-  "generated_at_utc": "2026-10-17T00:25:21.678591+00:00",
+  "generated_at_utc": "2026-10-18T00:00:09.452319+00:00",
   "group_type": "industry",
   "group_count": 84,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
   "groups": [
     {
       "industry_en": "Other transportation",
-      "avg_rs_raw": 25.09670919405887,
+      "avg_rs_raw": 25.096709194058867,
       "n_stocks": 9,
       "leaders_80plus": 3,
       "group_rs_rating": 99,
@@ -51,7 +51,7 @@
     },
     {
       "industry_en": "Semiconductors",
-      "avg_rs_raw": 5.5719661287898345,
+      "avg_rs_raw": 5.571353547981302,
       "n_stocks": 120,
       "leaders_80plus": 45,
       "group_rs_rating": 93,
