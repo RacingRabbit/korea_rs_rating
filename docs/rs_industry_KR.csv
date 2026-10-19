@@ -1,5 +1,5 @@
 industry_en,avg_rs_raw,n_stocks,leaders_80plus,group_rs_rating,leader_pct,industry_ko
-Other transportation,25.096709194058867,9,3,99,33.3,기타 교통수단
+Other transportation,25.09670919405887,9,3,99,33.3,기타 교통수단
 Electrical products,8.974591223091867,80,32,98,40.0,전기 제품
 Electronic components,7.1466584129009885,59,19,97,32.2,전자 부품
 Multi-line insurance,6.523642747464741,5,3,96,60.0,복합 보험
@@ -49,7 +49,7 @@ Engineering & construction,-12.873529744517299,53,10,45,18.9,엔지니어링 및
 Other consumer services,-12.932818297346127,14,4,44,28.6,기타 소비자 서비스
 Computer processing hardware,-13.137792818712862,6,1,43,16.7,컴퓨터 프로세싱 하드웨어
 Metal fabrication,-13.191817938327894,36,4,42,11.1,금속 가공
-Real estate investment trusts,-13.282966079702298,25,4,41,16.0,부동산 투자 신탁
+Real estate investment trusts,-13.282966079702296,25,4,41,16.0,부동산 투자 신탁
 Forest products,-13.763793340825938,8,1,40,12.5,임산물
 Medical distributors,-13.768255051046909,17,2,38,11.8,의료 유통업체
 Investment banks/Brokers,-13.904644776692287,23,1,37,4.3,투자은행/중개사
@@ -70,7 +70,7 @@ Commercial printing/Forms,-20.35933583073376,5,0,21,0.0,상업 인쇄 / 서식
 Aerospace & defense,-20.800141022563643,20,2,20,10.0,항공우주 및 방위산업
 Pulp & paper,-20.86333372902263,16,1,18,6.2,펄프 및 제지
 Motor vehicles,-21.08941032889834,6,0,17,0.0,자동차
-Movies/Entertainment,-21.24816457821679,33,5,16,15.2,무비/엔터테인먼트
+Movies/Entertainment,-21.248164578216794,33,5,16,15.2,무비/엔터테인먼트
 Biotechnology,-21.43303776976716,61,9,15,14.8,바이오테크놀로지
 Broadcasting,-21.4913130588366,8,0,14,0.0,브로드캐스팅
 Other metals/Minerals,-21.796747551178306,11,0,13,0.0,기타 금속/광물
