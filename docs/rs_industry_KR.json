@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-24T00:37:06.895058+00:00",
+  "generated_at_utc": "2026-10-25T00:18:38.180707+00:00",
   "group_type": "industry",
   "group_count": 84,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -348,7 +348,7 @@
     },
     {
       "industry_en": "Industrial specialties",
-      "avg_rs_raw": -12.51464155312745,
+      "avg_rs_raw": -12.524047793311338,
       "n_stocks": 36,
       "leaders_80plus": 8,
       "group_rs_rating": 55,
