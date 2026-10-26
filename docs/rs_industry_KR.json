@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-25T00:18:38.180707+00:00",
+  "generated_at_utc": "2026-10-26T00:17:27.548247+00:00",
   "group_type": "industry",
   "group_count": 84,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -60,7 +60,7 @@
     },
     {
       "industry_en": "Semiconductors",
-      "avg_rs_raw": 1.192197704899069,
+      "avg_rs_raw": 1.1921977048990688,
       "n_stocks": 120,
       "leaders_80plus": 44,
       "group_rs_rating": 92,
@@ -114,11 +114,11 @@
     },
     {
       "industry_en": "Electronic equipment/Instruments",
-      "avg_rs_raw": -5.630398135348483,
-      "n_stocks": 56,
-      "leaders_80plus": 10,
+      "avg_rs_raw": -5.801760312470363,
+      "n_stocks": 55,
+      "leaders_80plus": 9,
       "group_rs_rating": 85,
-      "leader_pct": 17.9,
+      "leader_pct": 16.4,
       "industry_ko": "\uc804\uc790 \uc7a5\ube44/\uae30\uae30"
     },
     {
@@ -176,22 +176,22 @@
       "industry_ko": "\uae08\uc735/\ub80c\ud0c8/\ub9ac\uc2a4"
     },
     {
-      "industry_en": "Food: specialty/candy",
-      "avg_rs_raw": -8.167204821846946,
-      "n_stocks": 25,
-      "leaders_80plus": 5,
-      "group_rs_rating": 77,
-      "leader_pct": 20.0,
-      "industry_ko": "\uc2dd\ud488: \ud2b9\uc0b0\ud488/\uacfc\uc790"
-    },
-    {
       "industry_en": "Construction materials",
       "avg_rs_raw": -8.168081481931932,
       "n_stocks": 26,
       "leaders_80plus": 4,
-      "group_rs_rating": 76,
+      "group_rs_rating": 77,
       "leader_pct": 15.4,
       "industry_ko": "\uac74\ucd95 \uc790\uc7ac"
+    },
+    {
+      "industry_en": "Food: specialty/candy",
+      "avg_rs_raw": -8.172698637671344,
+      "n_stocks": 26,
+      "leaders_80plus": 5,
+      "group_rs_rating": 76,
+      "leader_pct": 19.2,
+      "industry_ko": "\uc2dd\ud488: \ud2b9\uc0b0\ud488/\uacfc\uc790"
     },
     {
       "industry_en": "Telecommunications equipment",
@@ -258,7 +258,7 @@
     },
     {
       "industry_en": "Electronic production equipment",
-      "avg_rs_raw": -10.349055888685708,
+      "avg_rs_raw": -10.34905588868571,
       "n_stocks": 70,
       "leaders_80plus": 22,
       "group_rs_rating": 66,
@@ -332,9 +332,9 @@
       "industry_en": "Information technology services",
       "avg_rs_raw": -12.144823652726947,
       "n_stocks": 62,
-      "leaders_80plus": 13,
+      "leaders_80plus": 14,
       "group_rs_rating": 57,
-      "leader_pct": 21.0,
+      "leader_pct": 22.6,
       "industry_ko": "\uc815\ubcf4 \uae30\uc220 \uc11c\ube44\uc2a4"
     },
     {
@@ -365,22 +365,22 @@
       "industry_ko": "\uc790\ub3d9\ucc28 \ubd80\ud488: OEM"
     },
     {
-      "industry_en": "Engineering & construction",
-      "avg_rs_raw": -13.111497074756862,
-      "n_stocks": 53,
-      "leaders_80plus": 11,
-      "group_rs_rating": 52,
-      "leader_pct": 20.8,
-      "industry_ko": "\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1 \ubc0f \uac74\uc124"
-    },
-    {
       "industry_en": "Advertising/Marketing services",
       "avg_rs_raw": -13.137056660760328,
       "n_stocks": 20,
       "leaders_80plus": 3,
-      "group_rs_rating": 51,
+      "group_rs_rating": 52,
       "leader_pct": 15.0,
       "industry_ko": "\uad11\uace0/\ub9c8\ucf00\ud305 \uc11c\ube44\uc2a4"
+    },
+    {
+      "industry_en": "Engineering & construction",
+      "avg_rs_raw": -13.171995246948843,
+      "n_stocks": 52,
+      "leaders_80plus": 11,
+      "group_rs_rating": 51,
+      "leader_pct": 21.2,
+      "industry_ko": "\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1 \ubc0f \uac74\uc124"
     },
     {
       "industry_en": "Regional banks",
@@ -564,11 +564,11 @@
     },
     {
       "industry_en": "Packaged software",
-      "avg_rs_raw": -19.051452960584747,
-      "n_stocks": 150,
+      "avg_rs_raw": -19.034984342083643,
+      "n_stocks": 149,
       "leaders_80plus": 30,
       "group_rs_rating": 27,
-      "leader_pct": 20.0,
+      "leader_pct": 20.1,
       "industry_ko": "\ud328\ud0a4\uc9c0 \uc18c\ud504\ud2b8\uc6e8\uc5b4"
     },
     {
