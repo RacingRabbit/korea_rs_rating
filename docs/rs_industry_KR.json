@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-31T01:33:41.896643+00:00",
+  "generated_at_utc": "2026-11-01T01:05:37.348866+00:00",
   "group_type": "industry",
   "group_count": 84,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -402,7 +402,7 @@
     },
     {
       "industry_en": "Investment managers",
-      "avg_rs_raw": -15.130631215318278,
+      "avg_rs_raw": -15.130631215318274,
       "n_stocks": 20,
       "leaders_80plus": 1,
       "group_rs_rating": 48,
