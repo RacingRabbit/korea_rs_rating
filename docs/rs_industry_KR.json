@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-07T01:52:21.179917+00:00",
+  "generated_at_utc": "2026-11-08T01:23:19.148246+00:00",
   "group_type": "industry",
   "group_count": 83,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -231,7 +231,7 @@
     },
     {
       "industry_en": "Semiconductors",
-      "avg_rs_raw": -15.629327072305484,
+      "avg_rs_raw": -15.62572361458539,
       "n_stocks": 121,
       "leaders_80plus": 32,
       "group_rs_rating": 69,
@@ -420,7 +420,7 @@
     },
     {
       "industry_en": "Textiles",
-      "avg_rs_raw": -20.0029629223907,
+      "avg_rs_raw": -20.046551623874137,
       "n_stocks": 28,
       "leaders_80plus": 5,
       "group_rs_rating": 45,
