@@ -1,84 +1,84 @@
 industry_en,avg_rs_raw,n_stocks,leaders_80plus,group_rs_rating,leader_pct,industry_ko
-Airlines,13.737372434623163,6,5,99,83.3,에어라인즈
-Other transportation,10.043748926323165,9,3,98,33.3,기타 교통수단
-Multi-line insurance,2.1778636563032534,5,3,97,60.0,복합 보험
-Major banks,-3.9902139372387695,6,3,95,50.0,주요 은행
-Financial publishing/Services,-4.152997825077795,5,2,94,40.0,금융 출판/서비스
-Homebuilding,-5.6714128356433475,10,4,93,40.0,홈빌딩
-Marine shipping,-7.0055669457285115,9,4,92,44.4,해상 운송
-Construction materials,-8.705400803766388,25,6,91,24.0,건축 자재
-Finance/Rental/Leasing,-9.55416798894297,25,11,90,44.0,금융/렌탈/리스
-Hotels/Resorts/Cruise lines,-10.745174172179189,6,1,88,16.7,호텔/리조트/크루즈 라인
-Financial conglomerates,-10.791615761557104,62,26,87,41.9,금융지주회사
-Electronic components,-11.132717081303726,58,15,86,25.9,전자 부품
-Internet software/Services,-11.300033686086065,25,7,85,28.0,인터넷 소프트웨어/서비스
-Gas distributors,-11.381482633968737,15,1,84,6.7,가스 유통업체
-Food: specialty/candy,-11.431909374079995,26,7,82,26.9,식품: 특산품/과자
-Chemicals: specialty,-11.625392654249405,66,20,81,30.3,화학: 특수
-Medical/Nursing services,-12.35809052451729,10,3,80,30.0,의료/간호 서비스
-Automotive aftermarket,-12.589494260901063,7,3,79,42.9,자동차 애프터마켓
-Regional banks,-12.784056640882122,6,1,78,16.7,지역 은행
-Electronic equipment/Instruments,-12.798521275277569,55,8,77,14.5,전자 장비/기기
-Aluminum,-12.859099558969028,8,2,75,25.0,알루미늄
-Forest products,-12.954767904295519,8,3,74,37.5,임산물
-Electrical products,-12.97040229997335,79,20,73,25.3,전기 제품
-Wholesale distributors,-13.461887028716616,26,5,72,19.2,도매 유통업체
-Semiconductors,-13.50140106297096,121,38,71,31.4,세미컨덕터
-Computer peripherals,-13.512751776069132,23,6,69,26.1,컴퓨터 주변기기
-Steel,-14.426331056264447,53,10,68,18.9,스틸
-Major telecommunications,-14.498484177170543,8,3,67,37.5,주요 통신사
-Other consumer services,-14.538997640618161,14,5,66,35.7,기타 소비자 서비스
-Industrial specialties,-15.199878129013882,36,8,65,22.2,산업 분야
-Information technology services,-15.54029068045553,62,15,64,24.2,정보 기술 서비스
-Auto parts: OEM,-15.80666116270712,95,14,62,14.7,자동차 부품: OEM
-Home furnishings,-16.226762609570464,16,3,61,18.8,가정용 가구
-Telecommunications equipment,-16.25571537394763,51,11,60,21.6,통신 장비
-Computer communications,-16.476632711352703,20,6,59,30.0,컴퓨터 통신
-Oil refining/Marketing,-16.67928817297814,7,0,58,0.0,정유/마케팅
-Food: major diversified,-16.705591970883216,9,1,56,11.1,식품: 주요 다각화
-Miscellaneous,-16.818756541475942,7,3,55,42.9,기타 (Miscellaneous)
-Department stores,-16.948526703359388,9,1,54,11.1,백화점
-Engineering & construction,-17.121264755020032,52,10,53,19.2,엔지니어링 및 건설
-Miscellaneous commercial services,-17.26663863903823,74,14,52,18.9,기타 상업 서비스
-Electronics/Appliances,-17.492007725593197,25,8,51,32.0,일렉트로닉스/어플라이언스
-Chemicals: agricultural,-17.62445709577053,8,0,49,0.0,화학: 농업
-Electronics distributors,-17.954972073838732,13,2,48,15.4,전자 부품 유통업체
-Advertising/Marketing services,-18.40844403066579,20,3,47,15.0,광고/마케팅 서비스
-Internet retail,-18.587232008521987,5,2,46,40.0,인터넷 소매
-Food: meat/fish/dairy,-18.740157727412917,14,5,45,35.7,식품: 육류/어류/유제품
-Beverages: alcoholic,-19.114277472378628,9,0,44,0.0,음료: 알콜류
-Textiles,-19.353735295617497,28,6,42,21.4,텍스타일
-Household/Personal care,-19.4767840672171,44,10,41,22.7,가정/개인 위생용품
-Air freight/Couriers,-19.639068854042005,10,1,40,10.0,항공/운수
-Apparel/Footwear,-19.791334966206435,46,13,39,28.3,어패럴/풋웨어
-Medical distributors,-20.203538214030125,17,3,38,17.6,의료 유통업체
-Industrial conglomerates,-20.557956622242116,6,2,36,33.3,산업 복합 기업
-Electronic production equipment,-20.719564888305072,70,14,35,20.0,전자 생산 장비
-Industrial machinery,-20.914471189611074,184,29,34,15.8,산업용 기계
-Real estate investment trusts,-22.02324648049088,25,3,33,12.0,부동산 투자 신탁
-Agricultural commodities/Milling,-22.601114666542227,26,0,32,0.0,농산물/제분
-Chemicals: major diversified,-22.727219353358,28,3,31,10.7,화학: 주요 복합
-Containers/Packaging,-22.809378055360177,21,3,29,14.3,컨테이너/패키징
-Pharmaceuticals: major,-22.97004823744364,127,18,28,14.2,의약품: 주요
-Investment banks/Brokers,-24.093935275703743,23,1,27,4.3,투자은행/중개사
-Metal fabrication,-24.109758039616718,36,5,26,13.9,금속 가공
-Broadcasting,-24.262251393574985,8,0,25,0.0,브로드캐스팅
-Medical specialties,-24.413251824300115,102,13,23,12.7,의학 전문 분야
-Motor vehicles,-24.607745739592044,6,1,22,16.7,자동차
-Packaged software,-24.678506129590286,152,24,21,15.8,패키지 소프트웨어
-Pulp & paper,-24.71568441331179,16,1,20,6.2,펄프 및 제지
-Publishing: books/magazines,-24.71578508156737,5,0,19,0.0,출판: 도서/잡지
-Investment managers,-24.97245844569019,21,3,18,14.3,투자 운용사
-Building products,-25.895932532185448,13,1,16,7.7,건축 자재
-Movies/Entertainment,-27.750289187294463,30,3,15,10.0,무비/엔터테인먼트
-Miscellaneous manufacturing,-27.915952720669576,11,1,14,9.1,기타 제조업
-Biotechnology,-28.569499355632683,61,9,13,14.8,바이오테크놀로지
-Pharmaceuticals: other,-30.13311493852174,17,1,12,5.9,의약품: 기타
-Computer processing hardware,-30.770312390944706,6,0,10,0.0,컴퓨터 프로세싱 하드웨어
-Recreational products,-31.17063345105505,12,1,9,8.3,레크리에이션 제품
-Aerospace & defense,-32.273752911967996,20,2,8,10.0,항공우주 및 방위산업
-Other metals/Minerals,-32.56311235937287,11,0,7,0.0,기타 금속/광물
-Specialty stores,-34.98388591056974,15,0,6,0.0,전문점
-Trucks/Construction/Farm machinery,-35.120061319082986,35,2,5,5.7,트럭/건설/농기계
-Office equipment/Supplies,-36.92890892430671,6,0,3,0.0,사무용품/소모품
-Data processing services,-41.40705078783071,5,0,2,0.0,데이터 처리 서비스
+Airlines,14.119887750333584,6,5,99,83.3,에어라인즈
+Other transportation,11.548603254663261,9,4,98,44.4,기타 교통수단
+Multi-line insurance,1.4146187689376535,5,3,97,60.0,복합 보험
+Financial publishing/Services,-4.026856371026004,5,2,95,40.0,금융 출판/서비스
+Major banks,-4.543679631526785,6,3,94,50.0,주요 은행
+Homebuilding,-5.639542225267086,10,4,93,40.0,홈빌딩
+Marine shipping,-7.521693612602941,9,4,92,44.4,해상 운송
+Construction materials,-7.897746504644167,25,6,91,24.0,건축 자재
+Electronic components,-8.097793676294613,58,17,90,29.3,전자 부품
+Finance/Rental/Leasing,-9.618665745097035,25,11,88,44.0,금융/렌탈/리스
+Financial conglomerates,-10.198715545016123,62,26,87,41.9,금융지주회사
+Semiconductors,-10.933746730195837,120,36,86,30.0,세미컨덕터
+Electronic equipment/Instruments,-11.3615635863231,55,12,85,21.8,전자 장비/기기
+Food: specialty/candy,-11.505372189750378,26,7,84,26.9,식품: 특산품/과자
+Electrical products,-11.593991886304316,79,18,82,22.8,전기 제품
+Gas distributors,-11.675960459482244,15,2,81,13.3,가스 유통업체
+Forest products,-11.870411435798335,8,2,80,25.0,임산물
+Chemicals: specialty,-11.918079658698572,66,20,79,30.3,화학: 특수
+Internet software/Services,-12.375553414170545,25,6,78,24.0,인터넷 소프트웨어/서비스
+Other consumer services,-12.460191019422703,14,6,77,42.9,기타 소비자 서비스
+Hotels/Resorts/Cruise lines,-13.110578445574864,6,1,75,16.7,호텔/리조트/크루즈 라인
+Regional banks,-13.496132661626563,6,1,74,16.7,지역 은행
+Aluminum,-13.6478423144096,8,2,73,25.0,알루미늄
+Wholesale distributors,-14.411075337364318,26,5,72,19.2,도매 유통업체
+Automotive aftermarket,-14.752856521966269,7,2,71,28.6,자동차 애프터마켓
+Telecommunications equipment,-14.938225178379772,51,13,69,25.5,통신 장비
+Computer peripherals,-14.99283129048514,23,6,68,26.1,컴퓨터 주변기기
+Industrial conglomerates,-15.041804305240918,6,2,67,33.3,산업 복합 기업
+Industrial specialties,-15.119318312915205,36,8,66,22.2,산업 분야
+Medical/Nursing services,-15.156017349836109,10,3,65,30.0,의료/간호 서비스
+Steel,-15.237482159353133,53,11,64,20.8,스틸
+Major telecommunications,-15.418310941578213,8,2,62,25.0,주요 통신사
+Miscellaneous,-15.65769591375451,7,3,61,42.9,기타 (Miscellaneous)
+Electronics/Appliances,-15.958834215906773,25,8,60,32.0,일렉트로닉스/어플라이언스
+Home furnishings,-16.025602587755245,16,2,59,12.5,가정용 가구
+Auto parts: OEM,-16.245495563342185,95,12,58,12.6,자동차 부품: OEM
+Information technology services,-16.43551873001193,62,14,56,22.6,정보 기술 서비스
+Computer communications,-16.54463264942963,20,6,55,30.0,컴퓨터 통신
+Engineering & construction,-16.555501711297033,52,11,54,21.2,엔지니어링 및 건설
+Electronics distributors,-16.82617096841184,13,2,53,15.4,전자 부품 유통업체
+Miscellaneous commercial services,-16.827554873486463,74,15,52,20.3,기타 상업 서비스
+Oil refining/Marketing,-17.00137215760054,7,0,51,0.0,정유/마케팅
+Advertising/Marketing services,-17.108884632956034,20,2,49,10.0,광고/마케팅 서비스
+Food: major diversified,-17.340264578413237,9,1,48,11.1,식품: 주요 다각화
+Internet retail,-17.444962430611792,5,2,47,40.0,인터넷 소매
+Department stores,-17.818758277340773,9,1,46,11.1,백화점
+Chemicals: agricultural,-18.52205894471863,8,0,45,0.0,화학: 농업
+Household/Personal care,-19.13915057833139,44,10,44,22.7,가정/개인 위생용품
+Textiles,-19.1827503520816,28,7,42,25.0,텍스타일
+Industrial machinery,-19.57062348203298,184,29,41,15.8,산업용 기계
+Food: meat/fish/dairy,-19.59194219487723,14,4,40,28.6,식품: 육류/어류/유제품
+Electronic production equipment,-19.758249234874693,70,14,39,20.0,전자 생산 장비
+Apparel/Footwear,-19.791611041788755,46,11,38,23.9,어패럴/풋웨어
+Beverages: alcoholic,-19.87282771148371,9,0,36,0.0,음료: 알콜류
+Air freight/Couriers,-19.96961315505102,10,1,35,10.0,항공/운수
+Agricultural commodities/Milling,-21.72225922877779,26,1,34,3.8,농산물/제분
+Medical distributors,-21.72278493234819,17,3,33,17.6,의료 유통업체
+Containers/Packaging,-21.763256927433595,21,3,32,14.3,컨테이너/패키징
+Broadcasting,-21.911538437088804,8,1,31,12.5,브로드캐스팅
+Chemicals: major diversified,-22.094466826993358,28,3,29,10.7,화학: 주요 복합
+Investment banks/Brokers,-22.848365838284447,23,1,28,4.3,투자은행/중개사
+Real estate investment trusts,-23.120877051734553,25,2,27,8.0,부동산 투자 신탁
+Pharmaceuticals: major,-23.29003988462265,127,16,26,12.6,의약품: 주요
+Metal fabrication,-23.752287111114086,36,6,25,16.7,금속 가공
+Packaged software,-23.838974778356576,153,24,23,15.7,패키지 소프트웨어
+Investment managers,-23.868612334937428,21,3,22,14.3,투자 운용사
+Publishing: books/magazines,-24.20373712620308,5,0,21,0.0,출판: 도서/잡지
+Motor vehicles,-25.112380717557244,6,1,20,16.7,자동차
+Medical specialties,-25.185075667439442,102,13,19,12.7,의학 전문 분야
+Movies/Entertainment,-25.456254681995,31,3,18,9.7,무비/엔터테인먼트
+Pulp & paper,-25.619331664934908,16,1,16,6.2,펄프 및 제지
+Building products,-26.28832835868781,13,1,15,7.7,건축 자재
+Miscellaneous manufacturing,-28.128849721619723,11,1,14,9.1,기타 제조업
+Biotechnology,-29.259613325615433,61,9,13,14.8,바이오테크놀로지
+Computer processing hardware,-29.812785019262446,6,0,12,0.0,컴퓨터 프로세싱 하드웨어
+Pharmaceuticals: other,-30.14795466432845,17,1,10,5.9,의약품: 기타
+Recreational products,-30.322348483001935,12,1,9,8.3,레크리에이션 제품
+Aerospace & defense,-31.875270250692417,20,2,8,10.0,항공우주 및 방위산업
+Other metals/Minerals,-32.264782230863155,11,0,7,0.0,기타 금속/광물
+Trucks/Construction/Farm machinery,-34.67694054175856,36,2,6,5.6,트럭/건설/농기계
+Specialty stores,-35.551217544584,15,0,5,0.0,전문점
+Office equipment/Supplies,-38.25567164838808,6,0,3,0.0,사무용품/소모품
+Data processing services,-42.129242797781544,5,0,2,0.0,데이터 처리 서비스
