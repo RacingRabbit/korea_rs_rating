@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-14T02:21:07.985264+00:00",
+  "generated_at_utc": "2026-11-15T01:50:49.144022+00:00",
   "group_type": "industry",
   "group_count": 83,
   "methodology": "Group RS Rating = percentile rank (1-99) of each group's constituent-average rs_raw score, using the same conversion as individual stock RS. Independent approximation, not IBD's method.",
@@ -150,7 +150,7 @@
     },
     {
       "industry_en": "Semiconductors",
-      "avg_rs_raw": -11.800752420984537,
+      "avg_rs_raw": -11.776315576824347,
       "n_stocks": 120,
       "leaders_80plus": 35,
       "group_rs_rating": 80,
@@ -555,7 +555,7 @@
     },
     {
       "industry_en": "Investment banks/Brokers",
-      "avg_rs_raw": -23.235636599899422,
+      "avg_rs_raw": -23.23563659989942,
       "n_stocks": 23,
       "leaders_80plus": 1,
       "group_rs_rating": 27,
